@@ -1,5 +1,9 @@
 footer{
-    width: 100vw;
-    height: 10vh;
-    background-color: black;
+    background-color: #ED419A;
+    padding: 50px;
+}
+
+img{
+    width: 300px;
+    height: auto;
 }
