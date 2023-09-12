@@ -1,8 +1,17 @@
 import Filme from "../filme/Filme";
 import './Main.css'
 export default function Main(){
+    let texto = "Guilherme"
+    function mudaTexto(){
+        console.log("tere")
+        texto = "terenciani"
+    }
     return(
         <main className="content-main">
+            <input className='barrapesquisa' type="text" onChange={mudaTexto} />
+            <div>
+                <p className='texto_digitado'>pesquisa: {texto}</p>
+            </div>
             <Filme titulo="Barbie" sinopse="Depois de ser expulsa da 
                     Barbieland por ser uma boneca 
                     de aparência menos do que 
