@@ -4,7 +4,7 @@ export default function Main(){
     let texto = "Guilherme"
     function mudaTexto(){
         console.log("tere")
-        texto = "terenciani"
+        texto = "Tere"
     }
     return(
         <>
