@@ -9,7 +9,7 @@ type FilmesType = {
 }
 export default function Main(){
     //Hook
-    const [texto,setTexto] = useState("Guilherme")
+    const [texto,setTexto] = useState("")
 
     const filmes:FilmesType[] = [
         {
@@ -20,7 +20,13 @@ export default function Main(){
         },
         {
             id:2,
-            titulo:"Transformers",
+            titulo:"Transformers Maiza",
+            sinopse:"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
+            imagem:"/transformes.jpeg"
+        },
+        {
+            id:3,
+            titulo:"Transformers Maiza",
             sinopse:"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.",
             imagem:"/transformes.jpeg"
         }
@@ -42,55 +48,14 @@ export default function Main(){
                 </div>
             </div>
             <main className="content-main">
-                <Filme titulo="Barbie" sinopse="Depois de ser expulsa da 
-                        Barbieland por ser uma boneca 
-                        de aparência menos do que 
-                        perfeita, Barbie parte para o 
-                        mundo humano em busca da 
-                        verdadeira felicidade."
-                        imagem="/barbie.png"
-                        />
-                <Filme titulo="Transformers" sinopse="Depois de ser expulsa da 
-                        Barbieland por ser uma boneca 
-                        de aparência menos do que 
-                        perfeita, Barbie parte para o 
-                        mundo humano em busca da 
-                        verdadeira felicidade."
-                        imagem="/transformes.jpeg"
-                        />
-                <Filme titulo="Transformers" sinopse="Depois de ser expulsa da 
-                        Barbieland por ser uma boneca 
-                        de aparência menos do que 
-                        perfeita, Barbie parte para o 
-                        mundo humano em busca da 
-                        verdadeira felicidade."
-                        imagem="/transformes.jpeg"
-                        />
-                <Filme titulo="Transformers" sinopse="Depois de ser expulsa da 
-                        Barbieland por ser uma boneca 
-                        de aparência menos do que 
-                        perfeita, Barbie parte para o 
-                        mundo humano em busca da 
-                        verdadeira felicidade."
-                        imagem="/transformes.jpeg"
-                        />
-                <Filme titulo="Transformers" sinopse="Depois de ser expulsa da 
-                        Barbieland por ser uma boneca 
-                        de aparência menos do que 
-                        perfeita, Barbie parte para o 
-                        mundo humano em busca da 
-                        verdadeira felicidade."
-                        imagem="/transformes.jpeg"
-                        />
-                <Filme titulo="Transformers" sinopse="Depois de ser expulsa da 
-                        Barbieland por ser uma boneca 
-                        de aparência menos do que 
-                        perfeita, Barbie parte para o 
-                        mundo humano em busca da 
-                        verdadeira felicidade."
-                        imagem="/transformes.jpeg"
-                        />
-
+                {filmes.filter((filme)=>filme.titulo.toLowerCase().includes(texto.toLowerCase())).map((filme:FilmesType)=>
+                    <Filme key={filme.id} 
+                           titulo={filme.titulo} 
+                           sinopse={filme.sinopse} 
+                           imagem={filme.imagem}
+                    />
+                    )
+                }
             </main>
         </>
     )
