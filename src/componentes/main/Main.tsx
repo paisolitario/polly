@@ -48,7 +48,9 @@ export default function Main(){
                 </div>
             </div>
             <main className="content-main">
-                {filmes.filter((filme)=>filme.titulo.toLowerCase().includes(texto.toLowerCase())).map((filme:FilmesType)=>
+                {filmes
+                .filter((filme)=>filme.titulo.toLowerCase().includes(texto.toLowerCase()))
+                .map((filme:FilmesType)=>
                     <Filme key={filme.id} 
                            titulo={filme.titulo} 
                            sinopse={filme.sinopse} 
