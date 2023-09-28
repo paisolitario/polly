@@ -4,7 +4,7 @@ function Header(){
     return(
         <header>
             <div>
-                <Link to="/home">Logo</Link>
+                <Link to="/">Logo</Link>
             </div>
             <nav>
                 <ul>

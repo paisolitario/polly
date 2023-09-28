@@ -11,27 +11,39 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <>
-              <Header/>
-              <Main/>
-              <Footer/>
-             </>,
-  },
-  {
-    path: "/home",
-    element: <div>Home</div>,
+    element: 
+      <>
+        <Header/>
+        <Main/>
+        <Footer/>
+      </>,
   },
   {
     path: "/sobre",
-    element: <div>Página Sobre!</div>,
+    element: 
+    <>
+      <Header/>
+      <div className='content-main'>Página Sobre!</div>
+      <Footer/>
+    </>,
   },
   {
     path: "/noticias",
-    element: <div>Página de Notícias!</div>,
+    element:
+    <>
+      <Header/>
+      <div className='content-main'>Página de Notícias!</div>
+      <Footer/>
+    </>,
   },
   {
     path: "/contato",
-    element: <div>Página de Contato!</div>,
+    element: 
+      <>
+        <Header/>
+        <div className='content-main'>Página de Contato!</div>
+        <Footer/>
+      </>,
   },
 ]);
 
