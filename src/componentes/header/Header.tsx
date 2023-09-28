@@ -1,23 +1,24 @@
 import './Header.css'
+import { Link } from 'react-router-dom'
 function Header(){
     return(
         <header>
             <div>
-                logo
+                <Link to="/home">Logo</Link>
             </div>
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Página inicial</a>
+                        <Link to="/">Página Inicial</Link>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <Link to="/sobre">Sobre</Link>
                     </li>
                     <li>
-                        <a href="#">Notícias</a>
+                        <Link to="/noticias">Notícias</Link>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <Link to="/contato">Contato</Link>
                     </li>
                 </ul>
             </nav>
